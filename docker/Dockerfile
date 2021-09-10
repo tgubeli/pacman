@@ -3,8 +3,8 @@ FROM node:boron
 MAINTAINER Ivan Font <ifont@redhat.com>
 
 # Create app directory
-RUN mkdir -p /usr/src/app
-WORKDIR /usr/src/app
+RUN mkdir -p /tmp/src/app
+WORKDIR /tmp/src/app
 
 # Clone game source code
 RUN git clone https://github.com/tgubeli/pacman.git .

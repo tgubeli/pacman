@@ -388,7 +388,7 @@ function geronimo() {
             };
 
         this.newGame = function() {
-            var r = confirm("Are you sure you want to restart?");
+            var r = confirm("¿Estas seguro de querer reiniciar el juego?");
             if (r) {
                 console.log("new Game");
                 this.init(0);
@@ -399,7 +399,7 @@ function geronimo() {
         this.nextLevel = function() {
             this.level++;
             console.log("Level "+game.level);
-            game.showMessage("Level "+game.level, this.getLevelTitle() + "<br/>(Click to continue!)");
+            game.showMessage("Nivel "+game.level, this.getLevelTitle() + "<br/>(Clic para continuar!)");
             game.refreshLevel(".level");
             this.init(1);
         };
@@ -421,31 +421,31 @@ function geronimo() {
         this.getLevelTitle = function() {
             switch(this.level) {
                 case 2:
-                    return '"The chase begins"';
+                    return '"La persecución comienza"';
                     // activate chase / scatter switching
                 case 3:
-                    return '"Inky\s awakening"';
+                    return '"El despertar de Inky"';
                     // Inky starts leaving the ghost house
                 case 4:
-                    return '"Clyde\s awakening"';
+                    return '"El despertar de Clyde"';
                     // Clyde starts leaving the ghost house
                 case 5:
                     return '"need for speed"';
                     // All the ghosts get faster from now on
                 case 6:
-                    return '"hunting season 1"';
+                    return '"temporada de caza 1"';
                     // TODO: No scatter mood this time
                 case 7:
-                    return '"the big calm"';
+                    return '"la gran calma"';
                     // TODO: Only scatter mood this time
                 case 8:
-                    return '"hunting season 2"';
+                    return '"temporada de caza 2"';
                     // TODO: No scatter mood and all ghosts leave instantly
                 case 9:
-                    return '"ghosts on speed"';
+                    return '"nubes veloces"';
                     // TODO: Ghosts get even faster for this level
                 default:
-                    return '"nothing new"';
+                    return '"nada nuevo"';
             }
         }
 
@@ -485,7 +485,7 @@ function geronimo() {
             else {
                 // pause timer
                 this.timer.stop();
-                this.showMessage("Pause","Click to Resume");
+                this.showMessage("Pausa","Clic para resumir");
             }
         };
 
@@ -1329,8 +1329,8 @@ function geronimo() {
             this.lives--;
             console.log("pacman died, "+this.lives+" lives left");
             if (this.lives <= 0) {
-                var input = "<div id='highscore-form'><span id='form-validater'></span><input type='text' id='playerName'/><span class='button' id='score-submit'>save</span></div>";
-                game.showMessage("Game over","Total Score: "+game.score.score+input);
+                var input = "<div id='highscore-form'><span id='form-validater'></span><input type='text' id='playerName'/><span class='button' id='score-submit'>guardar</span></div>";
+                game.showMessage("Game over","Puntaje Total: "+game.score.score+input);
                 game.gameOver = true;
                 $('#playerName').focus();
                 }
@@ -1430,7 +1430,7 @@ function checkAppCache() {
         $('body').on('click', '#score-submit', function(){
             console.log("submit highscore pressed");
             if ($('#playerName').val() === "" || $('#playerName').val() === undefined) {
-                $('#form-validater').html("Please enter a name<br/>");
+                $('#form-validater').html("Por favor ingrese su nombre<br/>");
             } else {
                 $('#form-validater').html("");
                 addHighscore();
@@ -1599,8 +1599,8 @@ function checkAppCache() {
 
                 // Pac Man
                 context.beginPath();
-                context.fillStyle = "Red";
-                context.strokeStyle = "Red";
+                context.fillStyle = "Red"; // change to Yellow
+                context.strokeStyle = "Red"; // change to Yellow
                 context.arc(pacman.posX+pacman.radius,pacman.posY+pacman.radius,pacman.radius,pacman.angle1*Math.PI,pacman.angle2*Math.PI);
                 context.lineTo(pacman.posX+pacman.radius, pacman.posY+pacman.radius);
                 context.stroke();
