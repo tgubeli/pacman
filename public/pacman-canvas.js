@@ -162,7 +162,7 @@ function geronimo() {
 
     function addHighscore() {
         var name = $("input[type=text]").val();
-        $("#highscore-form").html("Saving highscore...");
+        $("#highscore-form").html("Guardando puntaje...");
         ajaxAdd(name, game.cloudProvider, game.zone, game.host,
                  game.score.score, game.level);
     }
@@ -227,7 +227,7 @@ function geronimo() {
         }
         this.refresh = function(h) {
             this.updateTime();
-            $(h).html("Time: " + this.getElapsedTimeSecs());
+            $(h).html("Tiempo: " + this.getElapsedTimeSecs());
         }
         this.reset = function() {
             this.elapsedTime = 0;
@@ -285,7 +285,7 @@ function geronimo() {
         this.monsters;
         this.level = 1;
         this.refreshLevel = function(h) {
-            $(h).html("Level: "+this.level);
+            $(h).html("Nivel: "+this.level);
         };
         this.gameOver = false;
         this.canvas = $("#myCanvas").get(0);
@@ -409,7 +409,7 @@ function geronimo() {
             for (var i = 0; i<count; i++) {
                 html += " <img src='img/heart.png'>";
                 }
-            $(".lives").html("Lives: "+html);
+            $(".lives").html("Vidas: "+html);
 
         };
 
@@ -666,7 +666,7 @@ function geronimo() {
             this.score += i;
         };
         this.refresh = function(h) {
-            $(h).html("Score: "+this.score);
+            $(h).html("Puntos: "+this.score);
         };
 
     }

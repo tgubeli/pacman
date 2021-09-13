@@ -4,24 +4,24 @@
 <html lang="en" manifest="cache.manifest">
 <head>
     <meta charset="utf-8" />
-    <title>Pac-Man</title>
+    <title>Cloud Hunter</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="pacman-canvas.css">
 
     <!-- SEO Stuff -->
-    <meta name="description" content="Play Pac-Man for free on your desktop or mobile. This whole game is open source and was created in HTML5." />
+    <meta name="description" content="Play cloud hunter for free on your desktop or mobile. This whole game is open source and was created in HTML5." />
     <meta name="robots" content="index,follow" />
-    <meta http-equiv="content-language" content="de">
-    <meta name="language" content="de">
+    <meta http-equiv="content-language" content="es">
+    <meta name="language" content="es">
     <meta name="page-topic" content="Games/Arcade" />
 
     <meta content="National" name="distribution" />
 
     <!-- Facebook Open Graph Information -->
     <meta property="og:image" content="img/Icon-200x200.png"/>
-    <meta property="og:title" content="Cloud Hunters" />
-    <meta property="og:description" content="Play Cloud Hunters for free on your desktop or mobile. This whole game is open source and was created in HTML5." />
-    <meta property="og:site_name" content="Cloud Hunters" />
+    <meta property="og:title" content="Cloud Hunter" />
+    <meta property="og:description" content="Play Cloud Hunter for free on your desktop or mobile. This whole game is open source and was created in HTML5." />
+    <meta property="og:site_name" content="Cloud Hunter" />
     <meta property="og:locale" content="en_US" />
 
     <!-- site icons -->
@@ -61,13 +61,13 @@
 <div class="content" id="highscore-content">
     <div class="button" id="back">&lt; volver</div>
     <div>
-        <h1>High score</h1>
+        <h1>High scores</h1>
         <p>
             <table id="highscore-table">
                 <thead>
                 <tr>
                     <th id="rank">Rank</th>
-                    <th id="playername">Nombre</th>
+                    <th id="playername">Jugador</th>
                     <th id="cloudprovider">Cloud</th>
                     <th id="zone">Zona</th>
                     <th id="host">Host</th>
@@ -86,7 +86,7 @@
 <div class="content" id="livestats-content">
     <div class="button" id="back">&lt; volver</div>
     <div>
-        <h1>Estadisticas en Vivo</h1>
+        <h1>Estad&iacute;sticas en Vivo</h1>
         <p>
             <table id="livestats-table">
                 <thead>
@@ -119,48 +119,48 @@
         <div class="nomobile">
             <h2>Controles</h2>
             <p>Use las flechas de su teclado o [W,A,S,D] para jugar en el juego.</p>
-            <p>Para pausar / resumir el juego presione [SPACIO] o [ESC] o solo haga clic en el area del juego.</p>
+            <p>Para pausar / resumir el juego presiona [SPACIO] o [ESC] o s&oacute;lo haz clic en el &aacute;rea del juego.</p>
         </div>
         <div class="mobile">
             <h2>Controles</h2>
-            <p>Use gestos de deslizamiento para jugar en el juego.</p>
-            <p>Alternativamente use los Botones de Flechas para jugar en el juego.</p>
-            <p>Para pausar / resumir el juego, toque el area de juego una vez.</p>
+            <p>Usa gestos de deslizamiento para jugar en el juego.</p>
+            <p>Alternativamente usa los Botones de Flechas para jugar en el juego.</p>
+            <p>Para pausar / resumir el juego, toca el area de juego una vez.</p>
         </div>
 
         <div>
-            <h2>Clouds</h2>
-            <p>Clouds are creatures that hunt you and will kill you if they catch you.</p>
-            <p>Every cloud has its own strategy to chase you.</p>
+            <h2>Nubes (Clouds)</h2>
+            <p>Las nubes son creaturas que intentar&aacute;n cazarte y te matar&aacute;n si te atrapan.</p>
+            <p>Cada nube tiene su propia estrategia para acecharte.</p>
             <h3>Inky<img src="img/inky.svg" class="pull-right"></h3>
-            Inky will stay in the cloud house until you has eaten at least 30 pills.    His home is the bottom right corner.
+            Inky se mantendr&aacute; en la casa de las nubes hasta que te comas al menos 30 p&iacute;ldoras.    Su lugar es la esquina inferior derecha.
             <h3>Blinky <img src="img/blinky.svg" class="pull-right"></h3>
-            Blinky is the most agressive of the 4 clouds. He will start chasing you right away, and aim directly at you. His home is the upper right corner.
+            Blinky es el m&aacute;s agresivo de las 5 nubes. Te comenzar&aacute; a acechar inmediatamente, e ir&aacute; directamente por t&iacute;. Su lugar es la esquina superior derecha.
             <h3>Pinky<img src="img/pinky.svg" class="pull-right"></h3>
-            Pinky will start chasing you right away, he will always aim 4 fields ahead and 4 fields left of you. His home is the upper left corner.
+            Pinky comenzar&aacute; a acecharte inmediatamente, el siempre buscar&aacute; estar 4 campos adelante y 4 campos a la izquierda tuya. Su lugar es la esquina superior izquierda.
             <h3>Clyde<img src="img/clyde.svg" class="pull-right"></h3>
-            Clyde will stay in the ghost house until you has eaten at least 2/3 of all pills. His home is the bottom left corner.
+            Clyde se mantendr&aacute; en la casa de nubes hasta que hayas comido 2/3 del total de las p&iacute;ldoras. Su lugar es la esquina inferior izquierda.
         </div>
 
         <div>
-            <h2>Cloud moods</h2>
-            The clouds have two different moods that change the way they act during the game.
-            <h3>Scatter mood</h3>
-            <p>This is the default mood. When clouds are in scatter mood, they will just go to their home corner and stay there.</p>
+            <h2>&Aacute;nimo de las Nubes</h2>
+            Las nubes tienen dos estados de &aacute;nimo que cambian la forma en la que act&uacute;an durante el juego.
+            <h3>&Aacute;nimo disperso</h3>
+            <p>Este es el estado por defecto. Cuando las nubes est&aacute;n en modo disperso, ellas simplemente se ir&aacute;n a su esquina por defecto y se mantendr&aacute;n ah&iacute;.</p>
             <img src="img/instructions/instructions_scatter.PNG">
-            <h3>Chase mood</h3>
-            <p>After a certain time the clouds change their mood and want to go chasing you. This is indicated through the walls turning red.</p>
+            <h3>&Aacute;nimo de persecuci&oacute;n</h3>
+            <p>Luego de cierto tiempo las nubes cambian su &aacute;nimo y comenzar&aacute;n a perseguirte. Esto es indicado cuando los muros se tornan rojos. </p>
             <img src="img/instructions/instructions_chase.PNG">
         </div>
 
         <div>
             <h2>Items</h2>
-            <h3>Pills</h3>
-            <p>The goal of every level is, to eat all the white pills without getting catched by the clouds. One pill results in 10 points.</p>
-            <h3>Powerpills</h3>
-            <p>In every level there are 4 powerpills, which are a bit bigger than the regular ones. If You eats those, you will get strong enough to eat the clouds. You can see this indicated by the clouds turning blue. One powerpill results in 50 points.</p>
+            <h3>P&iacute;ldoras</h3>
+            <p>El objetivo de cada nivel es comer todas las p&iacute;ldoras sin ser atrapado por las nubes. Cada p&iacute;ldora equivale a 10 puntos.</p>
+            <h3>S&uacute;per p&iacute;ldoras</h3>
+            <p>En cada nivel existen 4 s&uacute;per p&iacute;ldoras, las cuales son un poco m&aacute;s grandes que las normales. Si te comes una de &eacute;stas, ser&aacute;s lo suficientemente fuerte para comerte a las nubes. Puedes darte cuenta de esto cuando las nubes se tornan azul. Cada s&uacute;per p&iacute;ldora equivale a 50 puntos.</p>
             <img src="img/instructions/instructions_powerpill.PNG">
-            <p>Eating a cloud results in 100 points. The soul of the cloud will return to the cloud house before starting to chase you again.</p>
+            <p>Comerte una nube equivale a 100 puntos. El alma de la nube debe retornar a la casa de nubes antes de comenzar a perseguirte de nuevo.</p>
         </div>
 
     </div>
@@ -171,10 +171,10 @@
     <div class="button" id="back">&lt; volver</div>
     <div>
         <h1>Info</h1>
-        <p>Current Version: 1.02 (05.02.2018)</p>
+        <p>Versión actual: 1.02.es (10.09.2021)</p>
         <img src="img/platzh1rsch-logo.png">
-        <p>Cloud Hunter is Open Source and is a fork from the Pac-Man project, originally written by <a href="http://platzh1rsch.ch">platzh1rsch</a> and modified by <a href="http://ivanfont.com">Ivan Font</a>. You can get the original code <a target="_blank" href="https://github.com/platzhersh/pacman-canvas">here</a> or this modified version <a target="_blank" href="https://github.com/tgubeli/pacman">here</a>.</p>
-        <p>If you have any suggestions how to make this app better, please file an issue on the github repo.</p>
+        <p>Cloud Hunter es Open Source y es un fork del proyecto Pac-Man, originalmente escrito por <a href="http://platzh1rsch.ch">platzh1rsch</a> y modificado por <a href="http://ivanfont.com">Ivan Font</a> y esta versi&oacute;n en español por <a href="https://github.com/tgubeli">Tom&aacute;s Gübeli</a>. Puedes obtener el c&oacute;digo original <a target="_blank" href="https://github.com/platzhersh/pacman-canvas">aqu&iacute;</a> o esta vers&oacute;n en español modificada <a target="_blank" href="https://github.com/tgubeli/pacman">aqu&iacute;</a>.</p>
+        <p>Si tienes alguna sugerencia para hacer esta aplicaci&oacute;n mejor, favor crea un issue en el repo github.</p>
         <p>
     </div>
 </div>
@@ -207,7 +207,7 @@
                 </div>
             </div>
             <canvas id="myCanvas" width="540" height="390">
-            <p>Canvas not supported</p>
+            <p>Canvas no soportado</p>
             </canvas>
         </div>
 
@@ -233,8 +233,8 @@
         <div class="controls" id="menu-buttons">
             <ul>
                 <li class="button" id="newGame">Nuevo Juego</li>
-                <li class="button" id="highscore">High Scores</li>
-                <li class="button" id="livestats">Estadisticas en Vivo</li>
+                <li class="button" id="highscore">Puntajes M&aacute;ximos</li>
+                <li class="button" id="livestats">Estad&iacute;sticas en Vivo</li>
                 <li class="button" id="instructions">Instrucciones</li>
                 <li class="button" id="info">Info</li>
             </ul>
