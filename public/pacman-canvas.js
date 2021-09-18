@@ -13,7 +13,7 @@
 
 "use strict";
 
-var imagesGhostPath = 'img';
+var imagesGhostPath = 'img/hamburger';
 
 function geronimo() {
 /* ----- Global Variables ---------------------------------------- */
